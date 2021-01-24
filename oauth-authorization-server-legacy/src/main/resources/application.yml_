@@ -1,0 +1,16 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /spring-security-oauth-server
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    platform: postgres
+    data: "classpath*:scripts.sql"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
